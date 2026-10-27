@@ -15,6 +15,7 @@ export function Home() {
   return (
     <div>
       <section className="hero">
+        <div className="hero-kicker">RAIL JOURNEY INTELLIGENCE</div>
         <h1>Track your train with a changing ETA.</h1>
         <p>
           See where your train is, when it is expected to arrive, and how
@@ -37,14 +38,14 @@ export function Home() {
           <div className="section-title">Popular trains</div>
           <div className="popular-grid">
             {popular.map((t) => (
-              <Link to={`/train/${t.id}`} key={t.id} className="card" style={{ padding: 18 }}>
-                <div style={{ fontWeight: 800, fontSize: 17 }}>{t.train_number}</div>
-                <div className="muted" style={{ fontSize: 14 }}>{t.train_name}</div>
-                <div style={{ marginTop: 10, fontWeight: 600, fontSize: 14 }}>
-                  {t.source} <span style={{ color: "var(--burgundy)" }}>→</span>{" "}
+              <Link to={`/train/${t.id}`} key={t.id} className="card popular-card">
+                <div className="popular-number">{t.train_number}</div>
+                <div className="muted popular-name">{t.train_name}</div>
+                <div className="popular-route">
+                  {t.source} <span className="popular-arrow">→</span>{" "}
                   {t.destination}
                 </div>
-                <div className="muted" style={{ fontSize: 13, marginTop: 6 }}>
+                <div className="muted popular-eta">
                   Expected {t.current_eta ?? "—"}
                 </div>
               </Link>

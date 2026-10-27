@@ -51,7 +51,8 @@ export function AppShell({ children }: { children: ReactNode }) {
           <NavLink to="/" className="brand">
             <span className="mark">◇</span>
             <span className="name">
-              Yatra<b>Pulse</b>
+              Dynamic Forecast of Expected Time of Arrival (ETA) for Coaching
+              Trains
             </span>
           </NavLink>
           <nav className="nav">
@@ -69,7 +70,8 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main className="container page-pad">{children}</main>
       <footer className="footer">
         <div className="container">
-          YatraPulse — a Smart India Hackathon prototype. Combines{" "}
+          Dynamic Forecast of Expected Time of Arrival (ETA) for Coaching
+          Trains — a Smart India Hackathon prototype. Combines{" "}
           <b>historical railway data</b> with a <b>simulated live operations</b>{" "}
           engine to demonstrate dynamic ETA. Simulated events are not actual
           Indian Railways live data.
